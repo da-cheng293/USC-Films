@@ -1,0 +1,110 @@
+
+   <ng-template [ngIf]="image_result">
+
+    <ng-template [ngIf]="screen_size=='desktop'">
+   <div class="carousel_page">
+    
+       
+   <h1>{{title}}</h1>
+   <div class="carousel_template">
+   <ngb-carousel  [interval]=0 >
+      <ng-template ngbSlide *ngFor="let matrix_row of image_result">
+        <div class="row">
+        <div class="image_six"  *ngFor="let matrix_col of matrix_row">
+         <div class="col-sm-9">
+          <div class="card" >
+            <ng-template [ngIf]="matrix_col.title">
+
+            <a routerLink="/watch/movie/{{ matrix_col.id}}"> 
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}
+            " alt="">
+          </a> 
+        </ng-template>
+        <ng-template [ngIf]="matrix_col.name">
+
+          <a routerLink="/watch/tv/{{ matrix_col.id}}"> 
+          <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}
+          " alt="">
+        </a> 
+      </ng-template>
+
+            <div class="card-body">
+
+              <ng-template [ngIf]="matrix_col.title">
+                <h4 class="card-title">{{matrix_col.title}}</h4>
+              </ng-template>
+
+              <ng-template [ngIf]="matrix_col.name">
+                <h4 class="card-title">{{matrix_col.name}}</h4>
+              </ng-template>
+              
+           
+            </div>
+          </div></div>
+
+    
+                  
+          </div></div>
+          
+      </ng-template>
+  </ngb-carousel>
+
+</div></div>
+
+
+</ng-template>
+
+
+<ng-template [ngIf]="screen_size=='mobile'">
+  <div class="carousel_page">
+   
+      
+  <h1>{{title}}</h1>
+  <div class="carousel_template" id="carousel_template_mobile">
+  <ngb-carousel  [interval]=0 >
+     <ng-template ngbSlide *ngFor="let matrix_row of image_result">
+       <div class="row">
+       <div class="image_six" id="image_six_mobile"  *ngFor="let matrix_col of matrix_row">
+        <div class="col-sm-9">
+         <div class="card" >
+           <ng-template [ngIf]="matrix_col.title">
+
+           <a routerLink="/watch/movie/{{ matrix_col.id}}"> 
+           <img class="card-img-top" id="img_mobile" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}
+           " alt="">
+         </a> 
+       </ng-template>
+       <ng-template [ngIf]="matrix_col.name">
+
+         <a routerLink="/watch/tv/{{ matrix_col.id}}"> 
+         <img class="card-img-top" id="img_mobile" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}
+         " alt="">
+       </a> 
+     </ng-template>
+
+           <div class="card-body" id="card-body_mobile">
+
+             <ng-template [ngIf]="matrix_col.title">
+               <h4 class="card-title">{{matrix_col.title}}</h4>
+             </ng-template>
+
+             <ng-template [ngIf]="matrix_col.name">
+               <h4 class="card-title">{{matrix_col.name}}</h4>
+             </ng-template>
+             
+          
+           </div>
+         </div></div>
+
+   
+                 
+         </div></div>
+         
+     </ng-template>
+ </ngb-carousel>
+
+</div></div>
+
+
+</ng-template>
+</ng-template>

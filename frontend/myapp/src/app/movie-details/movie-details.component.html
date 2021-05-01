@@ -1,0 +1,10 @@
+<div class="movie_detail_page">
+<app-details-template [video_key]= "video_key" [movie_block]="movie_detail_result" [screen_size]="check_mobile"></app-details-template>
+<app-cast-template [cast_input]="cast_result"></app-cast-template>
+
+<app-review-template  [review_input]="review_result" ></app-review-template>
+
+<app-carousel-template   [image_result]="recommend_results" [title]="recommend_title" [screen_size]="check_mobile" ></app-carousel-template>
+
+<app-carousel-template [image_result]="similar_results" [title]="similar_title" [screen_size]="check_mobile"></app-carousel-template>
+</div>

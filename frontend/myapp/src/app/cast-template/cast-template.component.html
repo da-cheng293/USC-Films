@@ -1,0 +1,36 @@
+<div class="cast_whole_page">
+<h1  >Full Cast and Crew</h1>
+<div class="cast_page">
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+
+    
+    
+    <ng-template [ngIf]="item.profile_path" *ngFor="let item of cast_input">
+<div class="col-6 col-sm-2 card-interval">
+ <a (click)="open_pop_up(item.id)"> 
+<div class="card">
+    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{item.profile_path}}
+    " alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+       <p class="card-title">AS</p>
+      <p class="card-text">{{item.character}}</p>
+      
+    </div>
+  </div></a>
+</div>
+</ng-template>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+</div>

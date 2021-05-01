@@ -1,0 +1,21 @@
+
+<nav class="navbar navbar-expand-md navbar-dark bg-nb-blue sticky-top" >
+    <a class="navbar-brand ml-4" routerLink="/">USC Films</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#shrink_button" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="shrink_button">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link ml-4" routerLink="/">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-4" routerLink="/mylist">My List</a>
+        </li>
+  
+      </ul>
+
+      <app-search-ahead [screen_size]="check_mobile"></app-search-ahead>
+    </div>
+  </nav>

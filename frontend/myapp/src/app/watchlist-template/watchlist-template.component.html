@@ -1,0 +1,147 @@
+
+
+<div class="watch_list_page">
+  <ng-template [ngIf]="image_result">
+<ng-template [ngIf]="!image_result==true || image_result[0].length==0 ">
+  
+<h2  >No items found in Watchlist.</h2>
+    
+  
+</ng-template>  
+<ng-template [ngIf]="image_result[0].length!=0 ">
+  <h1>{{title}}</h1>
+    <div class="carousel_template">
+    <ngb-carousel  [interval]=0 [showNavigationArrows]=false [showNavigationIndicators]=false>
+       <ng-template ngbSlide *ngFor="let matrix_row of image_result">
+         <div class="row">
+         <div class="image_six"  *ngFor="let matrix_col of matrix_row">
+          <div class="col-sm-9">
+           <div class="card" >
+
+            <ng-template [ngIf]="matrix_col.title">
+
+              <ng-template [ngIf]="matrix_col.poster_path">
+
+ 
+              <a routerLink="/watch/movie/{{ matrix_col.id}}"> 
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}" alt="">
+            </a> 
+          </ng-template>
+
+          <ng-template [ngIf]="!matrix_col.poster_path">
+
+ 
+            <a routerLink="/watch/movie/{{ matrix_col.id}}"> 
+            <img class="card-img-top" src="/assets/images/movie_placeholder.png" alt="">
+          </a> 
+        </ng-template>
+
+          </ng-template>
+          
+         <ng-template [ngIf]="matrix_col.name">
+          <ng-template [ngIf]="matrix_col.poster_path">
+           <a routerLink="/watch/tv/{{ matrix_col.id}}"> 
+           <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}" alt="">
+         </a> 
+        </ng-template>
+        <ng-template [ngIf]="!matrix_col.poster_path">
+          <a routerLink="/watch/tv/{{ matrix_col.id}}"> 
+          <img class="card-img-top" src="/assets/images/movie_placeholder.png" alt="">
+        </a> 
+       </ng-template>
+       </ng-template>
+     
+ 
+             <div class="card-body">
+ 
+               <ng-template [ngIf]="matrix_col.title">
+                 <h4 class="card-title">{{matrix_col.title}}</h4>
+               </ng-template>
+ 
+               <ng-template [ngIf]="matrix_col.name">
+                 <h4 class="card-title">{{matrix_col.name}}</h4>
+               </ng-template>
+               
+            
+             </div>
+           </div></div>
+ 
+     
+                   
+           </div></div>
+           
+       </ng-template>
+   </ngb-carousel>
+ 
+ </div>
+ </ng-template>
+
+</ng-template>
+ <ng-template [ngIf]="image_result_mobile">
+  <ng-template [ngIf]="!image_result_mobile==true || image_result_mobile[0].length==0 ">
+  
+    <h2 id="mobile_h2" >No items found in Watchlist.</h2>
+        
+      
+    </ng-template>  
+
+  <ng-template [ngIf]="image_result_mobile[0].length!=0 ">
+    <h1>{{title}}</h1>
+  
+  <div class="row">
+    <div class="col-7 " id="mobile_image_six" *ngFor="let matrix_col of image_result_mobile[0]">
+     <div >
+      <div class="card" id="mobile_card" >
+        <ng-template [ngIf]="matrix_col.title">
+
+          <ng-template [ngIf]="matrix_col.poster_path">
+
+
+          <a routerLink="/watch/movie/{{ matrix_col.id}}"> 
+          <img class="card-img-top" id="mobile_image_movie" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}" alt="">
+        </a> 
+      </ng-template>
+
+      <ng-template [ngIf]="!matrix_col.poster_path">
+
+
+        <a routerLink="/watch/movie/{{ matrix_col.id}}"> 
+        <img class="card-img-top"  id="mobile_image_movie" src="/assets/images/movie_placeholder.png" alt="">
+      </a> 
+    </ng-template>
+
+      </ng-template>
+      
+     <ng-template [ngIf]="matrix_col.name">
+      <ng-template [ngIf]="matrix_col.poster_path">
+       <a routerLink="/watch/tv/{{ matrix_col.id}}"> 
+       <img class="card-img-top"  id="mobile_image_tv" src="https://image.tmdb.org/t/p/w500{{matrix_col.poster_path}}" alt="">
+     </a> 
+    </ng-template>
+    <ng-template [ngIf]="!matrix_col.poster_path">
+      <a routerLink="/watch/tv/{{ matrix_col.id}}"> 
+      <img class="card-img-top" id="mobile_image_tv"   src="/assets/images/movie_placeholder.png" alt="">
+    </a> 
+   </ng-template>
+   </ng-template>
+
+        <div class="card-body" id="mobile_card_body">
+
+          <ng-template [ngIf]="matrix_col.title">
+            <h4 class="card-title" id="mobile_card-title_movie">{{matrix_col.title}}</h4>
+          </ng-template>
+
+          <ng-template [ngIf]="matrix_col.name">
+            <h4 class="card-title" id="mobile_card-title_tv">{{matrix_col.name}}</h4>
+          </ng-template>
+          
+       
+        </div>
+      </div></div>
+
+
+              
+      </div></div>
+    </ng-template>
+ </ng-template>
+</div>

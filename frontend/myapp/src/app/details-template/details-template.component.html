@@ -1,0 +1,123 @@
+<ng-template [ngIf]="movie_block">
+  <ng-template [ngIf]="screen_size=='desktop'">
+<div class="detail_block">
+<div class="card" >
+  <div class="row">
+    <div class="col-sm-8" id="video_padding" >
+      <div class="embed-responsive embed-responsive-16by9">  
+  <youtube-player 
+  videoId={{video_key}}
+  suggestedQuality="highres" 
+   
+ 
+  [showBeforeIframeApiLoads]="false"
+  >
+</youtube-player></div></div>
+<div class="col-sm-4">
+  
+    <div class="card-body">
+      <h5 class="card-title">{{movie_block.title}}</h5>
+      <p class="tag_line">{{movie_block.tagline}}</p>
+      <p ><span class="year">{{movie_block.release_date}} |</span >  <span class="vote">  &#9733; {{movie_block.vote_average}}</span> <span class="time"> | {{movie_block.runtime}}</span> </p>
+      <p class="genres">  <span class="genres_text"> Genres:</span> <span *ngFor="let item of movie_block.genres; let i=index" > {{item.name}} <span *ngIf="i != movie_block.genres.length-1">,</span>  </span></p>
+      <p class="language"> <span class="spoken_text" >Spoken Languages: </span> <span *ngFor="let item_lan of movie_block.spoken_languages; let j=index" >{{item_lan.english_name}} <span *ngIf="j != movie_block.spoken_languages.length-1">,</span> </span>  </p>
+      <ng-template [ngIf]="add_button">
+      <a   id="add_button"  class="btn btn-primary" (click)="Add_to_watch_list()">Add to Watchlist</a></ng-template>
+
+      <ng-template [ngIf]="delete_button">
+        <a   id="add_button"  class="btn btn-primary" (click)="Add_to_watch_list()">Remove from Watchlist</a></ng-template>
+      <ngb-alert #closed_alert *ngIf="actual_message" type="success" (closed)="actual_message = ''">{{ actual_message }}
+      </ngb-alert>
+      <ngb-alert #closed_alert *ngIf="failed_message" type="danger" (closed)="failed_message = ''">{{ failed_message }}
+      </ngb-alert>
+    </div>
+  
+  
+
+ 
+  
+  </div></div>
+    <div class="row">
+      <div class="col-sm" >
+    <div class="overview">
+      <h1>Description</h1>
+    <p class="overview_text">{{movie_block.overview}}</p>
+
+ 
+  
+  </div>  </div></div>
+  <div class="share_option">
+    <h2>Share</h2>
+    <div class="share_icon">
+      <a href="https://twitter.com/intent/tweet?text=Watch {{movie_block.title}}  &url=https://www.youtube.com/watch?v={{video_key}}   &hashtags=USC&hashtags=CSCI571&hashtags=FightOn" class="fa fa-twitter" target="_blank" ></a>
+  
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D{{video_key}}&amp;src=sdkpreparse" class="fa fa-facebook-square"  target="_blank"></a>
+  </div></div>
+ 
+</div>
+</div>
+</ng-template>
+
+
+<ng-template [ngIf]="screen_size=='mobile'">
+  <div class="detail_block">
+  <div class="card" id="card_mobile" >
+    <div class="row">
+      <div class="col-12 col-sm-8" id="video_padding" >
+        <div class="embed-responsive embed-responsive-16by9">  
+    <youtube-player 
+    videoId={{video_key}}
+    suggestedQuality="highres" 
+     
+   
+    [showBeforeIframeApiLoads]="false"
+    >
+  </youtube-player></div></div>
+  <div class="col-12 col-sm-4">
+    
+      <div class="card-body" id="card-body-mobile">
+        <h5 class="card-title" id="card-title-mobile">{{movie_block.title}}</h5>
+        <p class="tag_line">{{movie_block.tagline}}</p>
+        <p ><span class="year">{{movie_block.release_date}} | </span >  <span class="vote">   &#9733; {{movie_block.vote_average}}</span> <span class="time"> | {{movie_block.runtime}}</span> </p>
+        <p class="genres">  <span class="genres_text"> Genres:</span> <span *ngFor="let item of movie_block.genres; let i=index" > {{item.name}} <span *ngIf="i != movie_block.genres.length-1">,</span>  </span></p>
+        <p class="language"> <span class="spoken_text" >Spoken Languages: </span> <span *ngFor="let item_lan of movie_block.spoken_languages; let j=index" >{{item_lan.english_name}} <span *ngIf="j != movie_block.spoken_languages.length-1">,</span> </span>  </p>
+        <ng-template [ngIf]="add_button">
+        <a   id="add_button"  class="btn btn-primary" (click)="Add_to_watch_list()">Add to Watchlist</a></ng-template>
+  
+        <ng-template [ngIf]="delete_button">
+          <a   id="add_button"  class="btn btn-primary" (click)="Add_to_watch_list()">Remove from Watchlist</a></ng-template>
+        <ngb-alert #closed_alert *ngIf="actual_message" type="success" (closed)="actual_message = ''">{{ actual_message }}
+        </ngb-alert>
+        <ngb-alert #closed_alert *ngIf="failed_message" type="danger" (closed)="failed_message = ''">{{ failed_message }}
+        </ngb-alert>
+      </div>
+    
+    
+  
+   
+    
+    </div></div>
+      <div class="row">
+        <div class="col-sm" >
+      <div class="overview">
+        <h1>Description</h1>
+      <p class="overview_text">{{movie_block.overview}}</p>
+  
+  
+    
+    </div>  </div></div>
+    <div class="share_option">
+      <h2>Share</h2>
+      <div class="share_icon">
+        <a href="https://twitter.com/intent/tweet?text=Watch {{movie_block.title}}  &url=https://www.youtube.com/watch?v={{video_key}}   &hashtags=USC&hashtags=CSCI571&hashtags=FightOn" class="fa fa-twitter" target="_blank" ></a>
+     
+       
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D{{video_key}}&amp;src=sdkpreparse" class="fa fa-facebook-square"  target="_blank"></a>
+    </div></div>
+  
+  </div>
+  </div>
+  </ng-template>
+
+
+</ng-template>

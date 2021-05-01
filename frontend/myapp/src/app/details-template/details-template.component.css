@@ -1,0 +1,159 @@
+.card{
+
+    position: relative;
+    left: 8%;
+    border: none;
+    top: 80px;
+    height:auto;
+    width: 90%;
+    background-color:  rgb(5,10,48);
+    
+    }
+
+#card_mobile{
+    position: relative;
+    left: 8%;
+    border: none;
+    top: 30px;
+    height:auto;
+    width: 90%;
+    background-color:  rgb(5,10,48);
+
+
+}
+
+.card-body{
+    color: white;
+    position: relative;
+     width: 90% ;
+     height: auto;
+    /* left: 65%;
+    top: -500px;  */
+}
+#card-body-mobile{
+    color: white;
+    position: relative;
+     width: 110% ;
+     height: auto;
+     right: 5%;
+}
+.overview{
+    color: white;
+    position: relative;
+    top: 10%;
+    height: auto;
+}
+
+.detail_block{
+    background-color:  rgb(5,10,48);
+    padding-bottom: 10%;
+    
+    
+}
+.overview_text{
+    position: relative;
+    top: 30px;
+    width: 90%;
+    color: rgba(125,129,151,255);
+}
+
+h2{
+    color: white;
+}
+.share_option{
+    position: relative;
+    top: 50px;
+    height: auto;
+}
+.fa-facebook-square{
+ font-size: 36px;
+ color: blue;
+ position: relative;
+ left: 1%;
+}
+
+.fa-twitter{
+    font-size: 36px;
+}
+
+.card-title{
+    font-size: 400%;
+     font-weight: 400;
+     width: 80%;
+}
+#card-title-mobile{
+
+    font-size: 300%;
+    font-weight: 400;
+    width: 100%;
+}
+.tag_line{
+    font-style: italic;
+    font-size: 150%;
+    color: rgba(172,176,194,255);
+}
+.vote{
+ 
+  color: rgba(172,176,194,255);
+}
+.genres_text{
+    color: white;
+}
+.genres{
+    color: rgba(125,129,151,255);
+}
+.language{
+    color: rgba(125,129,151,255);
+}
+
+.year{
+    color: rgba(172,176,194,255);
+}
+.time{
+    color: rgba(172,176,194,255);
+}
+.spoken_text{
+    color: white;
+}
+
+/* #video_padding{
+    position: relative;
+    right: 2%;
+} */
+
+.row{
+    width: 100%;
+}
+
+
+
+
+p{
+    font-size: 220%;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    p{
+        font-size: 120%;
+    }
+
+    h1{
+        font-size: 150%;
+        position: relative;
+        top: -30px;
+    }
+
+    .overview_text{
+        position: relative;
+        top: -20px;
+        width: 100%;
+    }
+
+    h2{
+        font-size: 150%;
+    }
+  }

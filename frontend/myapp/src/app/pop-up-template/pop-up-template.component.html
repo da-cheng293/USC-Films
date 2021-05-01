@@ -1,0 +1,73 @@
+
+ <ng-template [ngIf]="person_info&&social_media">
+ 
+<div class="modal-header">
+    <h4 class="modal-title">{{person_info.name}}</h4>
+    <button type="button" id="cross_mark" class="close" aria-label="Close" (click)="pop_model.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+       
+    
+    <div class="card">
+        <div class="row ">
+            <div class=" col-12 col-sm-3 ">
+  <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{person_info.profile_path}}" alt="">
+</div>
+<div class="col-12 col-sm-9">
+        <div id=" right_side" class="card-body">
+          <ng-template [ngIf]= "person_info.birthday">
+            <p class="card-text">Birth: {{person_info.birthday}} </p></ng-template>
+
+            <ng-template [ngIf]= "person_info.place_of_birth">
+            <p class="card-text">Birth Place: {{person_info.place_of_birth}}</p></ng-template>
+            <ng-template [ngIf]="person_info.gender" >
+            <ng-template [ngIf]="person_info.gender==1">
+            <p class="card-text">Gender: Female </p>
+        </ng-template>
+        <ng-template [ngIf]="person_info.gender==2">
+            <p class="card-text">Gender: Male </p>
+        </ng-template></ng-template>
+        <ng-template [ngIf]="person_info.homepage" > <p class="card-text">Website: <a href={{person_info.homepage}} target="_blank">{{person_info.homepage}}</a> </p>  </ng-template>
+        <ng-template [ngIf]="person_info.known_for_department" >
+            <p class="card-text">Known for: {{person_info.known_for_department}}</p></ng-template>
+
+            <ng-template [ngIf]="person_info.also_known_as.length!=0" >
+            <p class="card-text"> Also Known as: <span *ngFor="let item of person_info.also_known_as;  let i = index"> {{item}}<span *ngIf="i != person_info.also_known_as.length-1">,</span></span></p></ng-template>
+
+            <ng-template [ngIf]="social_media.imdb_id">
+             
+                <a href="https://imdb.com/name/{{social_media.imdb_id}}" class="fa fa-imdb" target="_blank" ngbPopover="Visit IMDB" triggers="mouseenter:mouseleave"></a>
+              
+          </ng-template>
+          <ng-template [ngIf]="social_media.instagram_id">
+            <a href="https://instagram.com/{{social_media.instagram_id}}/" class="fa fa-instagram" target="_blank" ngbPopover="Visit Instagram" triggers="mouseenter:mouseleave"></a>
+        </ng-template>
+        <ng-template [ngIf]="social_media.facebook_id">
+          <a href="https://facebook.com/{{social_media.facebook_id}}" class="fa fa-facebook-official" target="_blank" ngbPopover="Visit Facebook" triggers="mouseenter:mouseleave"></a>
+      </ng-template>
+            
+      <ng-template [ngIf]="social_media.twitter_id">
+        <a href="https://twitter.com/{{social_media.twitter_id}}" class="fa fa-twitter" target="_blank" ngbPopover="Visit Twitter" triggers="mouseenter:mouseleave"></a>
+    </ng-template>
+            
+          </div>
+      </div>
+  
+    </div>
+      
+        <div class="card-body">
+          <h5 class="card-title">Biography</h5>
+          <p class="card-text">{{person_info.biography}}</p>
+        
+        </div>
+      </div>
+
+    
+</div>
+    
+  </div>
+ 
+</ng-template>

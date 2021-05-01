@@ -1,0 +1,119 @@
+.cast_whole_page{
+    min-height: 400px;
+    padding-top: 2%;
+}
+
+.cast_page{
+    min-height: 100px;
+    overflow-x: scroll;
+    position: relative;
+    padding-top: 3%;
+    left: 7%;
+    width: 84%;
+  display: inline-block;
+  padding-bottom: 2%;
+    
+}
+
+h1{
+    position: relative;
+    left: 7.5%;
+    padding-top: 1%;
+    color: white;
+    width: 90%;
+    display: inline-block;
+    top: 30px;
+    font-size: 300%;
+}
+
+
+img{
+
+  width: 103%;
+  height: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.card-body{
+   
+  
+    text-align: center;
+    
+} 
+
+.card{
+    background-color:  white;
+    padding-top: -10px;
+    border: none;
+    padding-left: 3%;
+   
+    width: 100%;
+    color: black;
+    height: auto;
+    border-radius: 25px;
+}
+.card-title{
+    font-weight: 800;
+    font-size: 100%;
+}
+
+.card-text{
+    font-size: 100%;
+}
+
+.cast_page::-webkit-scrollbar {
+    height: 10px;
+    
+  }
+   
+  .cast_page::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(235, 233, 233, 0.295);
+  }
+   
+  .cast_page::-webkit-scrollbar-thumb {
+    background-color: grey;
+   
+    border-radius: 10px;
+    border: none;
+   
+  }
+
+  .card:hover{
+      cursor: pointer;
+  }
+
+
+  @media (max-width: 500px) {
+
+
+    h1{
+      position: relative;
+      left: 7.5%;
+      padding-top: 1%;
+      color: white;
+      width: 90%;
+      display: inline-block;
+      top: 30px;
+      font-size: 200%;
+      
+  }
+
+
+  .cast_page{
+    min-height: 100px;
+    overflow-x: scroll;
+    position: relative;
+    padding-top: 10%;
+    left: 7%;
+    width: 84%;
+  display: inline-block;
+  padding-bottom: 2%;
+    
+}
+
+.cast_whole_page{
+  min-height: 400px;
+  padding-top: 10%;
+}
+
+  }

@@ -1,0 +1,207 @@
+img{
+    position: relative;
+
+    left: 0%;
+    width:150%;
+    height: auto;
+    
+    padding-top: 10%;
+    
+    
+}
+
+
+/* .image_six:hover img{
+    transform: scale(1.1);
+}
+.image_six:hover h2{
+    display: block;
+}
+.single_image{
+    position: relative;
+   
+} */
+
+.image_six{
+    position: relative;
+    display: inline-block;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    width: 15%;
+    left: 5%;
+    height: 0;
+    padding-bottom: 30%;
+    
+    
+    
+}
+
+.carousel_template{
+    position: relative;
+    display: inline-block;
+    padding-top: 1%;
+    left: 5%;
+    width: 91%;
+
+    padding-bottom: 1%;
+    
+    
+   
+
+}
+
+
+
+.carousel_template :focus{
+
+    outline: none;
+}
+
+h1{
+    display: inline-block;
+    position: relative;
+    left: 7.5%;
+    padding-top: 1%;
+    color: white;
+    width: 80%;
+    
+  
+}
+
+/* .carousel_template ::ng-deep .carousel-inner{
+    
+    padding-left: 4%;
+    padding-right: 50%;
+    
+} */
+.carousel_template ::ng-deep .carousel-control-prev{
+  position: absolute;
+  
+   padding-bottom: 7%;
+   width: 5%;
+  
+}
+.carousel_template ::ng-deep .carousel-control-next{
+    position: absolute;
+    width: 5%;
+    padding-bottom: 7%;
+    
+ }
+
+ .carousel_template ::ng-deep  .carousel-indicators{
+    position: absolute;
+    
+    padding-bottom: 5%;
+ }
+/* h2{
+    display: none;
+    font-size: 2%;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 280px;
+    left: 10px;
+} */
+
+/* ::ng-deep .carousel-caption{
+    flex: auto;
+} */
+
+
+.card{
+    background-color:  rgb(5,10,48);
+    border: none;
+    position: relative;
+    top: 10%;
+    width: 100%;
+    
+}
+
+.image_six:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.image_six:hover .card-body {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.card-body{
+
+    opacity: 0;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1)
+   
+    );
+    position: relative;
+    top:-80px;
+    width: 152%;
+    right: 2%
+
+}
+
+#card-body_mobile{
+    opacity: 1;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1)
+   
+    );
+    position: relative;
+    top:-80px;
+    width: 152%;
+    right: 0.5%
+}
+
+.card-title{
+    position: relative;
+    padding-top: 18%;
+    color: white;
+    font-size: 2%;
+    width: 80%;
+}
+
+
+
+    #image_six_mobile{
+        position: relative;
+        display: inline-block;
+        padding-right: 0.5%;
+        padding-left: 0.5%;
+        width: 40%;
+        left: 20%;
+        height: 300px;
+        
+        
+        
+        
+        
+    }
+
+
+    #img_mobile{
+        position: relative;
+    
+        left: 0%;
+        width:150%;
+        height: auto;
+        padding-top: 1%;
+       
+        
+        
+    }
+    #carousel_template_mobile ::ng-deep  .carousel-indicators li { visibility: hidden; }
+    
+ 

@@ -1,0 +1,265 @@
+img{
+    position: relative;
+
+    left: 0%;
+    width:150%;
+    height: auto;
+    
+    padding-top: 60%;
+    
+    
+}
+.watch_list_page{
+
+    min-height: 810px;
+}
+#mobile_image_movie{
+    position: relative;
+
+    left: 70%;
+    width:200%;
+    height: auto;
+    
+    padding-top: 10%;
+}
+
+#mobile_image_tv{
+    position: relative;
+
+    left: 70%;
+    width:200%;
+    height: auto;
+    
+    padding-top: 10%;
+}
+
+
+/* .image_six:hover img{
+    transform: scale(1.1);
+}
+.image_six:hover h2{
+    display: block;
+}
+.single_image{
+    position: relative;
+   
+} */
+
+#mobile_card{
+
+    background-color:  rgb(5,10,48);
+    border: none;
+    position: relative;
+    top: 50px;
+    width: 50%;
+    left: 13%;
+}
+
+.image_six{
+    position: relative;
+    display: block;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    width: 15%;
+    left: 5%;
+    height: 0;
+    padding-bottom: 30%;
+    
+    
+    
+}
+
+.carousel_template{
+    position: relative;
+    padding-top: 1%;
+    left: 5%;
+    width: 91%;
+
+    padding-bottom: 1%;
+    
+    
+   
+
+}
+
+
+
+.carousel_template :focus{
+
+    outline: none;
+}
+h1{
+    display: inline-block;
+    left: 5%;
+    position: relative;
+    top:100px;
+    
+    padding-top: 1%;
+    color: white;
+    width: 80%;
+    font-size: 300%;
+    padding-bottom: 5%;
+    
+}
+#mobile_h2{
+    left: 7%;
+    position: relative;
+    top:100px;
+    
+    padding-top: 1%;
+  color: white;
+    width: 80%;
+    font-size: 200%;
+    text-align: center;
+}
+
+h2{
+    left: 35%;
+    position: relative;
+    top:100px;
+    
+    padding-top: 1%;
+  color: white;
+    width:60%;
+    font-size: 300%;
+    
+}
+
+/* .carousel_template ::ng-deep .carousel-inner{
+    
+    padding-left: 4%;
+    padding-right: 50%;
+    
+} */
+
+/* h2{
+    display: none;
+    font-size: 2%;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 280px;
+    left: 10px;
+} */
+
+/* ::ng-deep .carousel-caption{
+    flex: auto;
+} */
+
+
+.card{
+    background-color:  rgb(5,10,48);
+    border: none;
+    position: relative;
+    top: 10%;
+    width: 100%;
+    
+}
+
+.image_six:hover .card-img-top{
+    transform: scale(1.1);
+}
+
+.image_six:hover .card-body {
+    opacity: 1;
+    
+
+}
+
+#mobile_image_six:hover #mobile_image_movie{
+    transform: scale(1.1);
+}
+#mobile_image_six:hover #mobile_image_tv{
+    transform: scale(1.1);
+}
+
+#mobile_image_six:hover #mobile_card_body {
+    opacity: 1;
+    transform: scale(1.1);
+
+}
+
+
+.card-body{
+
+    opacity: 0;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1)
+   
+    );
+    position: relative;
+    top:-80px;
+    width: 167%;
+    right: 8%
+
+}
+
+#mobile_card_body{
+
+    opacity: 1;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1)
+   
+    );
+    position: relative;
+    top:-80px;
+    width: 203%;
+    left: 69%;
+
+}
+.card-title{
+    position: relative;
+    padding-top: 18%;
+    color: white;
+    font-size: 2%;
+    width: 40%;
+}
+
+.row{
+    width: 100%;
+}
+
+
+@media (max-width: 500px) {
+    h1{
+        display: inline-block;
+        left: 20%;
+        position: relative;
+        top: 30px;
+        
+       
+        color: white;
+        width: 80%;
+        font-size: 250%;
+        padding-bottom: 5%;
+        
+    }
+
+    .card-title{
+        position: relative;
+        padding-top: 18%;
+        color: white;
+        font-size: 2%;
+        width: 60%;
+    }
+    .watch_list_page{
+
+        min-height: 580px;
+    }
+
+   
+}

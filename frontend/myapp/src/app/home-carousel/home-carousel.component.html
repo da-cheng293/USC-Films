@@ -1,0 +1,65 @@
+
+<div class="carousel_home" >
+
+  
+<div class="row justify-content-sm-center">
+
+ <div class="col-sm-12">
+  <ng-template [ngIf]="image_result">
+
+    <ng-template [ngIf]="screen_size=='desktop'">
+<ngb-carousel >
+
+
+    <ng-template ngbSlide  *ngFor="let item of image_result">
+      <a routerLink="/watch/movie/{{ item.id}}">
+     <div>
+      <div class="picsum-img-wrapper">
+        
+        <img src="https://image.tmdb.org/t/p/original{{item.backdrop_path}}" alt="">
+        
+      </div>
+      <div class="carousel-caption">
+        
+        <div class="text_hide" > <span class="real_text"> {{ item.title}}</span></div>
+        
+        
+      </div></div></a>
+   
+    </ng-template>
+ 
+  </ngb-carousel>
+</ng-template> 
+
+<ng-template [ngIf]="screen_size=='mobile'">
+  <div id="carousel_home_mobile">
+  <ngb-carousel >
+  
+  
+      <ng-template ngbSlide  *ngFor="let item of image_result">
+        <a routerLink="/watch/movie/{{ item.id}}">
+       <div>
+        <div class="picsum-img-wrapper">
+          
+          <img id="img_mobile" src="https://image.tmdb.org/t/p/original{{item.backdrop_path}}" alt="">
+          
+        </div>
+        <div class="carousel-caption">
+          
+          <div class="text_hide" id="text_hide_mobile" > <span class="real_text" id="real_text_mobile"> {{ item.title}}</span></div>
+          
+          
+        </div></div></a>
+     
+      </ng-template>
+   
+    </ngb-carousel>
+  </div>
+  </ng-template> 
+
+
+</ng-template>
+</div>
+ </div>
+
+</div>

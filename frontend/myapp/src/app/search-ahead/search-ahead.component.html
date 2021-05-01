@@ -1,0 +1,67 @@
+
+
+<ng-template [ngIf]="screen_size=='desktop'">
+<div class="ahead_desktop">
+<ng-template #search_tp let-res="result"   >
+   
+    <img [src]="'https://image.tmdb.org/t/p/w500' + res['backdrop_path']" class="mr-0" style="width: 15%">
+    <ng-template [ngIf]="res.title">
+      
+    <ngb-highlight class="dropdown_text"  [result]="res.title" >  </ngb-highlight>
+  
+  </ng-template>
+  <ng-template [ngIf]="res.name">
+    
+    <ngb-highlight class="dropdown_text" [result]="res.name" ></ngb-highlight>
+  
+  </ng-template>
+
+  </ng-template>
+
+  
+  
+   
+    <input id="search-ahead" type="text"
+          
+           class="form-control"                     
+           [(ngModel)]="model"
+           [ngbTypeahead]="search_bar"                     
+           [inputFormatter]="format_blank"
+           (selectItem)="output_link($event)"
+           placeholder="Search"  
+           [resultTemplate]="search_tp"                  
+      /></div>
+</ng-template>
+
+<ng-template [ngIf]="screen_size=='mobile'">
+  <div class="ahead_mobile">
+  <ng-template #search_tp let-res="result"   >
+     
+      <img [src]="'https://image.tmdb.org/t/p/w500' + res['backdrop_path']" class="mr-0" style="width: 15%">
+      <ng-template [ngIf]="res.title">
+        
+      <ngb-highlight class="dropdown_text"  [result]="res.title" >  </ngb-highlight>
+    
+    </ng-template>
+    <ng-template [ngIf]="res.name">
+      
+      <ngb-highlight class="dropdown_text" [result]="res.name" ></ngb-highlight>
+    
+    </ng-template>
+  
+    </ng-template>
+  
+    
+    
+     
+      <input id="search-ahead" type="text"
+            
+             class="form-control"                     
+             [(ngModel)]="model"
+             [ngbTypeahead]="search_bar"                     
+             [inputFormatter]="format_blank"
+             (selectItem)="output_link($event)"
+             placeholder="Search"  
+             [resultTemplate]="search_tp"                  
+        /></div>
+  </ng-template>

@@ -1,0 +1,53 @@
+#search-ahead {
+    background-color:  rgb(1,12,32)  !important;
+    border-top: 0 !important;
+    border-left:0 !important ;
+    border-right: 0 !important;
+    border-radius: 0;
+    box-shadow: none;
+    
+    border-color: white;
+    color: white ;
+
+    
+    
+}
+
+::ng-deep .dropdown-menu { width: 20%;
+background-color:rgb(5,10,48);
+color: white; 
+border-color: white;
+}
+::ng-deep .text_clo{
+    color: white;
+}
+
+::ng-deep img{
+    position: relative;
+    right: 3%;
+    height: 30px;
+}
+::ng-deep #search-ahead{
+    width: 90%;
+    position: relative;
+    right: 15%;
+}
+
+::ng-deep.dropdown_text{
+    font-size: 12px;
+    color: white;
+}
+
+
+
+
+ .ahead_mobile ::ng-deep .dropdown-menu {
+        width: 80%;
+
+    }
+
+  .ahead_mobile ::ng-deep #search-ahead{
+        width: 50%;
+        position: relative;
+        right: 1%;
+    }

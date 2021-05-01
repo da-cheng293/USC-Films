@@ -1,0 +1,39 @@
+<ng-template [ngIf]="review_input">
+<div class="review_page">
+  <ng-template [ngIf]="review_input.length<=10">
+<h1>Reviews <span class="count_review">{{review_input.length}}</span> </h1> </ng-template> 
+<ng-template [ngIf]="review_input.length>10">
+  <h1>Reviews <span class="count_review">10</span> </h1> </ng-template> 
+<div  *ngFor="let item of review_input; let i =index" >
+  <ng-template [ngIf]="i<=9"> 
+<div class="card">
+  
+  <div class="row">   
+      <div class="col-12 offset-1 col-sm-2 offset-sm-0"> 
+        <div class="row justify-content-md-center">  
+          <div class="col-6"> 
+    <img class="card-img-top" src={{item.author_details.avatar_path}} alt="">
+  </div>
+  </div> 
+</div> 
+<div class="col-10 col-sm-9">
+    <div class="card-body">
+        <ng-template [ngIf]="item.author_details.rating" >
+      <h5 class="card-title">A review created by {{item.author}} <span id="point">  &#9733; {{item.author_details.rating}}</span> </h5></ng-template> 
+      <ng-template [ngIf]="!item.author_details.rating == true" >
+        <h5 class="card-title">A review created by {{item.author}} <span id="point">  &#9733; 0</span> </h5></ng-template> 
+      <p class="card-text" id="text_date">Written by {{item.author}} on {{item.created_at| date:"medium"}}</p>
+      <p class="card-text">{{item.content}}</p>
+     
+      <a href={{item.url}} target="_blank"> <u>Read the rest</u> </a>
+    </div></div>
+</div>
+
+</div></ng-template>
+
+</div>
+
+
+
+</div>
+</ng-template>

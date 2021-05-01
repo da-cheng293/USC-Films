@@ -1,0 +1,171 @@
+/* #carouselExampleIndicators .carousel {
+
+
+    height: 1000px !important;
+} */
+
+img{
+    position: relative;
+    padding-top: 1%;
+   
+    left: 0%;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: top;
+    
+    
+}
+/* img:hover {
+    
+    transform: scale(1.1);
+} */
+
+.carousel-caption{
+    padding-right: 40%;
+    width: 80%;
+    height: 200px;
+}
+
+.carousel_home{
+    position: relative;
+    padding-top: 0.5%;
+    left: 8%;
+    width: 83%;
+   
+   
+    
+    
+    
+}
+
+.carousel_home ::ng-deep .carousel-control-next{
+    width: auto;
+    padding: 2%;
+    top: 10%;
+}
+
+.carousel_home ::ng-deep .carousel-control-prev{
+    width: auto;
+    padding: 2%;
+    top: 10%;
+}
+.carousel_home :focus {
+   outline: none;
+}
+
+.carousel_home :hover {
+    
+    cursor: pointer;
+    
+}
+.carousel_home:hover img{
+    transform: scale(1.1);
+}
+.carousel_home:hover .text_hide{
+    opacity: 1;
+}
+/* .text_hide:hover{
+    opacity: 1;
+} */
+
+
+
+.text_hide{
+     opacity: 0;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1),
+    rgba(0,0,0,1)
+   
+    );
+    position: relative;
+    top: 20%;
+    right: 80%;
+    width: 600%;
+    text-align: left;
+    height: 200px;
+    /* width: 100%;
+    height: 200px;
+    text-align: left;
+    position: relative;
+    right: 160%;
+    top: 30%;
+    padding-left: 60%;
+    padding-top: 50%; */
+}
+
+.real_text{
+    position: relative;
+    top: 50%;
+    left: 10%;
+}
+
+
+    #real_text_mobile{
+        position: relative;
+        top: 50%;
+        left: 7%;
+    }
+    #text_hide_mobile{
+        opacity: 1;
+       background-image: linear-gradient(
+       to bottom,
+       rgba(0,0,0,0),
+       rgba(0,0,0,0.5),
+       rgba(0,0,0,0.5),
+       rgba(0,0,0,1),
+       rgba(0,0,0,1),
+       rgba(0,0,0,1),
+       rgba(0,0,0,1)
+      
+       );
+       position: relative;
+       top: 82%;
+       right: 80%;
+       width: 1000%;
+       text-align: left;
+       height: 70px;
+       /* width: 100%;
+       height: 200px;
+       text-align: left;
+       position: relative;
+       right: 160%;
+       top: 30%;
+       padding-left: 60%;
+       padding-top: 50%; */
+   }
+   
+    #carousel_home_mobile ::ng-deep .carousel-control-next{
+        width: auto;
+        padding: 2%;
+        top: 20%;
+    }
+    
+    #carousel_home_mobile ::ng-deep .carousel-control-prev{
+        width: auto;
+        padding: 2%;
+        top: 20%;
+    }
+    #carousel_home_mobile ::ng-deep  .carousel-indicators li { visibility: hidden; }
+    #img_mobile{
+        position: relative;
+        padding-top: 5%;
+       
+        left: 0%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+    }
+
+
+    /* #carousel_home_mobile:hover #img_mobile{
+        transform: scale(1.1);
+    } */
+  

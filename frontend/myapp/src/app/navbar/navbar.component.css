@@ -1,0 +1,33 @@
+.bg-nb-blue {
+    background-color: rgb(1,12,32) !important;
+}
+
+.search_box {
+    background-color:  rgb(1,12,32)  !important;
+    border-top: 0 !important;
+    border-left:0 !important ;
+    border-right: 0 !important;
+    border-radius: 0;
+    box-shadow: none;
+    
+    border-color: white;
+    color: while;
+    
+}
+
+
+
+
+.search_button {
+    display: none;
+}
+
+.nav-link {
+    text-align: right;
+}
+
+/* .navbar{
+    
+    width: 100%;
+    top: 0;
+} */
